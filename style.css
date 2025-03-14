@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Oxanium;
+    border: none;
+    outline: none;
+}
+:root {
+    --accent-color:rgb(186, 192, 224);
+    --border-color:rgb(84, 97, 153);
+}
+@font-face {
+    font-family: 'Oxanium';
+    src: url('fonts/oxanium.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+hr {
+    border: 1pt solid var(--accent-color);
+    margin: 6pt;
+}
+.bodycontainer {
+    height: calc(100vh - 15pt) !important;
+    display: flex;
+}
+.sidebar {
+    width: 150pt;
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar div {
+    height: 16pt;
+    line-height: 16pt;
+    margin: 2pt;
+    padding: 3.5pt;
+    display: flex;
+    background-color: white;
+    border-left: 2px solid var(--border-color);
+    transition: all .07s ease-in-out;
+}
+
+.sidebar div:hover {
+    transform: translate(2pt, 0px);
+}
+
+.messagecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.messages {
+    height: 100%;
+    width: 100%;
+    animation: pan 360s linear infinite;
+    background-color: var(--accent-color);
+}
+
+.message {
+    display: flex;
+    margin: 5pt;
+    border: 1px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
+    background-color: white;
+}
+
+.message p {
+    margin-top: -4pt;
+}
+
+.pfp {
+    min-width: 40pt;
+    width: 40pt;
+    height: 40pt;
+    background-color: var(--accent-color);
+    margin: 2pt;
+}
+.messagetext {
+    display:flex;
+    flex-direction: column;
+}
+
+.messagebox {
+    min-height: 30pt;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+.messagebox textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    height: 100%;
+    font-size: small;
+    line-height: 15pt;
+    background-color: var(--border-color);;
+    color: white;
+    font-weight: bold;
+}
