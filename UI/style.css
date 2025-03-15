@@ -11,10 +11,10 @@
 
     /* default theme */
 
-    /* --background-color:rgb(186, 192, 224);
+    --background-color:rgb(186, 192, 224);
     --border-color:rgb(84, 97, 153);
     --text-color:rgb(40, 50, 70);
-    --body-color:rgb(255, 255, 255); */
+    --body-color:rgb(255, 255, 255);
 
     /* orange theme */
 
@@ -24,10 +24,10 @@
     --body-color:rgb(255, 243, 252); */
 
     /* dark theme */
-    --background-color:rgb(67, 61, 68);
+    /* --background-color:rgb(67, 61, 68);
     --border-color:rgb(31, 22, 29);
     --text-color:rgb(166, 149, 168);
-    --body-color:rgb(49, 41, 47);
+    --body-color:rgb(49, 41, 47); */
 }
 @font-face {
     font-family: 'Oxanium';
@@ -50,6 +50,8 @@ hr {
     background-color: var(--body-color);
     padding: 2pt;
     border-bottom: 1px solid var(--border-color);
+    overflow: scroll;
+    scrollbar-width: none;
 }
 .bodycontainer {
     height: calc(100vh - 15pt) !important;
@@ -62,7 +64,15 @@ hr {
     border-right: 2pt solid var(--border-color);
 }
 
-.sidebar div {
+.sidebar footer{
+    min-height: 50pt;
+    border-top: 1px solid var(--border-color);
+    position: absolute;
+    bottom: 0pt;
+    width: 100%;
+}
+
+.sidebar li {
     height: 16pt;
     line-height: 16pt;
     margin: 2pt;
@@ -73,7 +83,7 @@ hr {
     user-select: none;
 }
 
-.sidebar div:hover {
+.sidebar li:hover {
     color: var(--accent-color);
     transform: translate(2pt, 0px);
 }
@@ -101,6 +111,7 @@ hr {
     border: 1px solid var(--border-color);
     border-bottom: 4px solid var(--border-color);
     background-color: var(--body-color);
+    border-radius: 1pt;
 }
 
 .message p {
@@ -117,6 +128,8 @@ hr {
 }
 
 .pfpsmall{
+    width: 20pt;
+    height: 20pt;
     min-width: 20pt;
     min-height: 20pt;
     background-color: var(--background-color);
