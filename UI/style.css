@@ -146,16 +146,9 @@ hr {
     flex-direction: column;
 }
 
-.messagetext input{
-    position:absolute;
-    right:8pt;
-    top: 7pt;
-    width: 15pt;
-}
-
 .messagebox {
     min-height: 30pt;
-    height:auto;
+    min-height:max-content;
     width: auto;
     border-top: 2px solid var(--border-color);
     border-radius: 5pt;
@@ -163,7 +156,7 @@ hr {
 }
 .messagebox textarea {
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: var(--body-color);
     padding: 5pt;
     color: var(--text-color);
