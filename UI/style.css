@@ -42,6 +42,14 @@ hr {
     border: 1pt solid var(--background-color);
     margin: 6pt;
 }
+.depth {
+    border: 1px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
+    background-color: var(--body-color);
+}
+.faded{
+    opacity: 50%;
+}
 .bodycontainer header {
     min-height: 22pt;
     height: 25pt;
@@ -98,9 +106,6 @@ hr {
 .message {
     display: flex;
     margin: 5pt;
-    border: 1px solid var(--border-color);
-    border-bottom: 4px solid var(--border-color);
-    background-color: var(--body-color);
 }
 
 .message p {
@@ -124,10 +129,6 @@ hr {
     border: 1px solid var(--border-color);
 }
 
-.faded{
-    opacity: 50%;
-}
-
 .messagetext {
     display:flex;
     flex-direction: column;
@@ -142,6 +143,7 @@ hr {
 
 .messagebox {
     min-height: 30pt;
+    height:auto;
     width: auto;
     border-top: 2px solid var(--border-color);
     border-radius: 5pt;
@@ -149,9 +151,12 @@ hr {
 }
 .messagebox textarea {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: var(--body-color);
     padding: 5pt;
+    color: var(--text-color);
+    overflow:scroll;
+    scrollbar-width: none;
 }
 
 .footer {
