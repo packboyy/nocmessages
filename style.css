@@ -7,23 +7,24 @@
     outline: none;
 }
 :root {
+    --accent-color: rgb(240, 135, 94);
+
     /* default theme */
 
-    /* --accent-color:rgb(186, 192, 224);
+    --background-color:rgb(186, 192, 224);
     --border-color:rgb(84, 97, 153);
     --text-color:rgb(40, 50, 70);
-    --body-color:rgb(255, 255, 255); */
+    --body-color:rgb(255, 255, 255);
 
     /* orange theme */
 
-    --accent-color:rgb(209, 181, 158);
+    /* --background-color:rgb(209, 181, 158);
     --border-color:rgb(124, 67, 89);
     --text-color:rgb(170, 69, 28);
-    --body-color:rgb(255, 243, 252);
+    --body-color:rgb(255, 243, 252); */
 
     /* dark theme */
-
-    /* --accent-color:rgb(67, 61, 68);
+    /* --background-color:rgb(67, 61, 68);
     --border-color:rgb(31, 22, 29);
     --text-color:rgb(166, 149, 168);
     --body-color:rgb(49, 41, 47); */
@@ -38,7 +39,7 @@ body {
     color: var(--text-color);
 }
 hr {
-    border: 1pt solid var(--accent-color);
+    border: 1pt solid var(--background-color);
     margin: 6pt;
 }
 .bodycontainer {
@@ -60,9 +61,11 @@ hr {
     display: flex;
     border-left: 2pt solid var(--border-color);
     transition: all .07s ease-in-out;
+    user-select: none;
 }
 
 .sidebar div:hover {
+    color: var(--accent-color);
     transform: translate(2pt, 0px);
 }
 
@@ -77,7 +80,10 @@ hr {
     height: 100%;
     width: 100%;
     animation: pan 360s linear infinite;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
+    overflow:scroll;
+    scrollbar-color: var(--border-color);
+    scrollbar-width: none;
 }
 
 .message {
@@ -96,7 +102,7 @@ hr {
     min-width: 40pt;
     width: 40pt;
     height: 40pt;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     margin: 2pt;
 }
 .messagetext {
@@ -127,6 +133,6 @@ hr {
     font-size: small;
     line-height: 15pt;
     background-color: var(--border-color);;
-    color: white;
+    color: var(--body-color);
     font-weight: bold;
 }
