@@ -7,14 +7,35 @@
     outline: none;
 }
 :root {
+    /* default theme */
+
     --accent-color:rgb(186, 192, 224);
     --border-color:rgb(84, 97, 153);
+    --text-color:rgb(40, 50, 70);
+    --body-color:rgb(255, 255, 255);
+
+    /* orange theme */
+
+    /* --accent-color:rgb(209, 181, 158);
+    --border-color:rgb(124, 67, 89);
+    --text-color:rgb(170, 69, 28);
+    --body-color:rgb(255, 243, 252); */
+
+    /* dark theme */
+
+    /* --accent-color:rgb(67, 61, 68);
+    --border-color:rgb(31, 22, 29);
+    --text-color:rgb(166, 149, 168);
+    --body-color:rgb(49, 41, 47); */
 }
 @font-face {
     font-family: 'Oxanium';
     src: url('fonts/oxanium.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
+}
+body {
+    color: var(--text-color);
 }
 hr {
     border: 1pt solid var(--accent-color);
@@ -27,8 +48,8 @@ hr {
 .sidebar {
     width: 150pt;
     height: 100%;
-    background-color: white;
-    border-right: 1px solid var(--border-color);
+    background-color: var(--body-color);
+    border-right: 2pt solid var(--border-color);
 }
 
 .sidebar div {
@@ -37,8 +58,7 @@ hr {
     margin: 2pt;
     padding: 3.5pt;
     display: flex;
-    background-color: white;
-    border-left: 2px solid var(--border-color);
+    border-left: 2pt solid var(--border-color);
     transition: all .07s ease-in-out;
 }
 
@@ -65,7 +85,7 @@ hr {
     margin: 5pt;
     border: 1px solid var(--border-color);
     border-bottom: 4px solid var(--border-color);
-    background-color: white;
+    background-color: var(--body-color);
 }
 
 .message p {
@@ -84,14 +104,22 @@ hr {
     flex-direction: column;
 }
 
+.messagetext input{
+    position:absolute;
+    right:8pt;
+    top: 7pt;
+    width: 15pt;
+}
+
 .messagebox {
     min-height: 30pt;
     width: 100%;
-    border: 1px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
 }
 .messagebox textarea {
     width: 100%;
     height: 100%;
+    background-color: var(--accent-color);
 }
 
 .footer {
